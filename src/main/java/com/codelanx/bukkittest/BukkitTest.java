@@ -16,6 +16,8 @@
  */
 package com.codelanx.bukkittest;
 
+import com.sk89q.minecraft.util.commands.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -31,6 +33,10 @@ public class BukkitTest extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         this.getServer().getPluginManager().registerEvents(this, this);
+    }
+
+    public void onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        
     }
 
 }

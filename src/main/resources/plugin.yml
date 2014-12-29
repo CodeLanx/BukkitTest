@@ -5,3 +5,6 @@ author: You!
 website: http://codelanx.com/
 main: ${project.groupId}.${project.artifactId}.${project.name}
 prefix: Testing
+commands:
+  test:
+    description: Testing command!
