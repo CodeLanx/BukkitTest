@@ -16,6 +16,7 @@
  */
 package com.codelanx.bukkittest;
 
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -25,16 +26,11 @@ import org.bukkit.plugin.java.JavaPlugin;
  * @author 1Rogue
  * @version 1.0.0
  */
-public class BukkitTest extends JavaPlugin {
+public class BukkitTest extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        
-    }
-
-    @Override
-    public void onDisable() {
-        
+        this.getServer().getPluginManager().registerEvents(this, this);
     }
 
 }
